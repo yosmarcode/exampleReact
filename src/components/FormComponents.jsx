@@ -3,10 +3,24 @@ import { Form } from "react-bootstrap";
 
 const FormComponents = () => {
   const [formValue, setFormValue] = useState({
-    name: "Cristian Prieto",
-    email: "c@example.com",
-    message: "Hola Soy Programador",
+    name: "",
+    email: "",
+    message: "",
   });
+
+  const saveform = ()=> {
+    if (formValue.name === "" || formValue.email==="" ){
+      alert("debes de completar el formulario")
+      return;
+    } else 
+    {
+      alert(JSON.stringify(
+        formValue
+      ))
+
+    }
+ 
+  }
 
  /** console.log("formValue", formValue) */
   return (
@@ -38,6 +52,9 @@ const FormComponents = () => {
           value={formValue.message}
           onChange={(e) => { setFormValue({...formValue, message: e.target.value}) }} />
       </Form.Group>
+      <button onClick={()=>saveform()}>
+        enviar info
+      </button>
     </Form>
   );
 };
