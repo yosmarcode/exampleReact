@@ -10,10 +10,10 @@ const FormComponents = () => {
 
  /** console.log("formValue", formValue) */
   return (
-    <Form>
+    <Form className="title">
 
       <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-        <Form.Label>Nombre</Form.Label>
+        <Form.Label>Nombressss</Form.Label>
         <Form.Control
           type="text"
           placeholder="Indique Nombre"
